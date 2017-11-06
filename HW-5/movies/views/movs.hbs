@@ -1,0 +1,21 @@
+<form method="GET" action="/movies" enctype="multipart/form-data">
+	Title <input type="radio" value="title" name="field" >
+	Director <input type="radio" value="director" name="field" >
+	Year <input type="radio" value="year" name="field" >
+	<input type="text" name="value">
+	<input type="submit" class="submitButton" value="Filter">
+</form>
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Director</th>
+		<th>Year</th>
+	</tr>
+	{{#each movies}}
+		<tr>
+			<td>{{title}}</td>
+			<td>{{director}}</td>
+			<td>{{year}}</td>
+		</tr>
+	{{/each}}
+</table>
