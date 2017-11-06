@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Colors Page</title>
+		<link href="./css/home.css" rel="stylesheet">
+	</head>
+	<body>
+		<form>
+			<div class="colorForms">
+				<div>
+					<input class="redForm" type="text" height="20" maxlength="3" size="3" name="red" />
+					<br>
+					<label class="redLabel" for="red">RED</label>
+				</div>
+				<div>
+					<input class="greenForm" type="text" height="20" maxlength="3" size="3" name="green" />
+					<br>
+					<label class="greenLabel" for="green">GREEN</label>
+				</div>
+				<div>
+					<input class="blueForm" type="text" height="20" maxlength="3" size="3" name="blue" />
+					<br>
+					<label class="blueLabel" for="blue">BLUE</label>
+				</div>
+				<div>
+					<input class="totalForm" type="text" height="20" maxlength="2" size="3" name="total" />
+					<br>
+					<label class="totalLabel" for="total">HOW MANY?</label>
+				</div>
+			</div>
+			<input type="submit" class="submitButton" value="GENERATE SHADES">
+		</form>
+		<div class="canvas">
+			{{#if items.validity}}
+				<ul>
+					{{#each items.colors}}
+						<li style="list-style: none; color: rgb({{ir}},{{ig}},{{ib}}); background-color: rgb({{r}},{{g}},{{b}})">{{hexName}} {{hexCode}} {{rgbString}}</li>
+					{{/each}}
+				</ul>
+			{{else}}
+				<h3 style="color: red">{{items.colors.badInputMessage}}</h3>
+			{{/if}}
+		</div>
+
+
+
+		
+	</body>
+</html>
+

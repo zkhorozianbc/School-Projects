@@ -1,0 +1,59 @@
+body {
+	text-align: center;
+}
+
+.submitButton {
+	background-color: white;
+}
+
+.colorForms {
+	width: 800px;
+	display: inline-block;
+}
+.colorForms div {
+	float: left;
+	height: 200px;
+	width: 200px;
+}
+
+label {
+	font-size: 25px;
+}
+form {
+	padding-top: 50px;
+
+}
+
+input {
+	font-size: 50px;
+}
+
+
+.redForm {
+	background-color: red;
+}
+.redLabel {
+	color: red;
+
+}
+
+.greenForm {
+	background-color: green;
+}
+.greenLabel {
+	color: green;
+}
+
+.blueForm {
+	background-color: blue;
+}
+.blueLabel {
+	color: blue;
+}
+
+.totalForm {
+	background-color: white;
+}
+.totalLabel {
+	color: white;
+}
