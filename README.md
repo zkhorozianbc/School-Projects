@@ -1,3 +1,0 @@
-# NYU CS Projects
-
- 
