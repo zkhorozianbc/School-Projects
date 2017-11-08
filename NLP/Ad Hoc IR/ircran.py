@@ -66,9 +66,9 @@ def read_cranqrel():
 			if j not in marked:
 				train[i]["Y"].append([j,5])
 
-		#create d_id, score map
-		# train[i]["X_map"] = dict(train[i]["X"])
-		# train[i]["Y_map"] = dict(train[i]["Y"])
+		create d_id, score map
+		train[i]["X_map"] = dict(train[i]["X"])
+		train[i]["Y_map"] = dict(train[i]["Y"])
 
 
 	for i in test.keys():
@@ -81,68 +81,11 @@ def read_cranqrel():
 
 	print train[1]
 
-		# test[i]["X_map"] = dict(test[i]["X"])
-		# test[i]["Y_map"] = dict(test[i]["Y"])
+		test[i]["X_map"] = dict(test[i]["X"])
+		test[i]["Y_map"] = dict(test[i]["Y"])
 
 
 	
-# def ListMLE():
-
-# 	y = tf.reduce_sum(tf.mul(x,W))
-
-
-
-
-
-
-
-# 	X = tf.placeholder(tf.float32, [None, 30])
-
-# 	W = tf.Variable(tf.random_normal([30, 5]))
-# 	y = tf.matmul(x, W)
-# 	y_ids
-# 	y_ = tf.placeholder(tf.float32, [None, 5])
-
-# 	n = tf.Constant(30)
-# 	phi = tf.reduce_prod(tf.convert_to_tensor([z[y_to_x[i]] / sum([z[y_to_x[k]] for k in range(i,n)]) for i in range(n)]))
-
-
-
-
-# 	init = tf.initialize_all_variables()
-# 	sess = tf.Session()
-# 	sess.run(init)
-# 	for i in range(len(train)*10):
-#   		batch_xs = [tf.convert_to_tensor(train[k]["X"]) for k in range(len(train))]
-# 		batch_ys = [tf.convert_to_tensor(train[k]["Y"]) for k in range(len(train))]
-#   		sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
-
-
-
-
-
-# 	f_cranqrel.close()
-
-			
-
-# def likelihood_loss():
-	
-
-# #scoring function: sigmoid(f-measure)
-
-# def learn():
-# 	sample = [x,y for ]
-
-
-
-
-	# nltk.metrics.scores.f_measure(X,Y)
-
-	# classifier = nltk.classify.NaiveBayesClassifier.train(train)
-	# classifier.classify_many(test)
-	# for pdist in classifier.prob_classify_many(test):
-	#     print('%.4f %.4f' % (pdist.prob('x'), pdist.prob('y')))
-
 def read_text(filename,occur_dict,text_dict):
 	f = open(filename,'r')
 
@@ -267,31 +210,22 @@ def vectorize():
 			else:
 				document_vector_dict[d_id] = 0
 
-		
+	
+
+		ranking = sorted((k for k,v in document_vector_dict.iteritems()), reverse=True)
 
 
-		
+
+		# sort documents by cosine similarity score
+		ranking = sorted(document_vector_dict,key=document_vector_dict.get,reverse=True)
+
+		# remove unrelated documents where score = 0
+		ranking = [rank for rank in ranking if document_vector_dict[rank] != 0]
 
 
-
-		# ranking = sorted((k for k,v in document_vector_dict.iteritems()), reverse=True)
-
-		ranking = [list(x) for x in sorted(document_vector_dict.items(), key=operator.itemgetter(1), reverse=True)]
-
-
-		#sort documents by cosine similarity score
-		# ranking = sorted(document_vector_dict,key=document_vector_dict.get,reverse=True)
-
-
-		#create instance of training data
-		docs_to_train[q_index] = ranking
-
-		#remove unrelated documents where score = 0
-		# ranking = [rank for rank in ranking if document_vector_dict[rank] != 0]
-
-		# #write to output file
-		# for d_id in ranking:
-		# 	f_output.write(str(q_index) + " " + str(d_id) + " " + str(document_vector_dict[d_id]) + "\n")
+		#write to output file
+		for d_id in ranking:
+			f_output.write(str(q_index) + " " + str(d_id) + " " + str(document_vector_dict[d_id]) + "\n")
 
 		q_index += 1
 
@@ -299,18 +233,10 @@ def vectorize():
 
 
 
-# class ListMLE():
-# 	def __init__(self):
-
-# 		self.weights = tf.Variable(tf.random_normal([784, 200], mean=0.0), name="weights")
-
-
 read_text('cran.qry',q_words,queries)
 read_text('cran.all.1400',d_words,documents)
 vectorize()
 read_cranqrel()
-# learn()
-
 
 
 
