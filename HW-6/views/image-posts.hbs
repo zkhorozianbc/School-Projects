@@ -1,0 +1,30 @@
+<form method="POST">
+	<ul style="list-style: none;">
+		<li>
+			Image Post Title: <input type="text" name="title" required>
+		</li>
+		<li>
+			Image 1 URL: <input type="text" name="url1" required> Caption: <input type="text" name="caption1">
+		</li>
+		<li>
+			Image 2 URL: <input type="text" name="url2"> Caption: <input type="text" name="caption2">
+		</li>
+		<li>
+			Image 3 URL: <input type="text" name="url3"> Caption: <input type="text" name="caption3">
+		</li>
+		<li>
+			<input type="submit" value="Add New Image Post">
+		</li>
+	</ul>
+</form>
+
+{{#each posts}}
+	<nav style="font-size: 20px"><a href="/image-post/{{this.slug}}">{{this.title}}</a></nav>
+	{{#each images}}
+		<p>{{caption}}</p>
+		<img src="{{url}}">
+		<br>
+	{{/each}}
+	<br>
+	<br>
+{{/each}}
