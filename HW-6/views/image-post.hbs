@@ -1,0 +1,18 @@
+<form method="POST">
+	{{#each posts}}
+		<nav style="font-size: 20px"><a href="/image-post/{{this.slug}}">{{this.title}}</a></nav>
+		{{#each images}}
+			<br>
+			<input type="checkbox" name="{{_id}}">{{caption}}
+			<img src="{{url}}">
+			<br>
+		{{/each}}
+		<br>
+		<br>
+	{{/each}}
+	<input type="submit" name="delete" value="Delete Selected Posts">
+	</form>
+<form method="POST">
+	Image URL: <input type="text" name="url" required> Caption: <input type="text" name="caption">
+	<input type="submit" name="add" value="Add New Image Post">
+</form>

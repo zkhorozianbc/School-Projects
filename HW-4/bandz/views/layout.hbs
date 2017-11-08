@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Common Layout</title>
+		<link href="./css/base.css" rel="stylesheet">
+	</head>
+	<body>
+		<h1>AITunes</h1>
+		<form method="get" class="filter">
+			Rock <input type="radio" value="Rock" name="filterGenre" >
+			Pop <input type="radio" value="Pop" name="filterGenre" >
+			Hip-hop <input type="radio" value="Hip-hop" name="filterGenre" >
+			Electronic <input type="radio" value="Electronic" name="filterGenre" >
+			Metal <input type="radio" value="Metal" name="filterGenre" >
+			Jazz <input type="radio" value="Jazz" name="filterGenre">
+			<input type="submit" class="submitButton" value="Filter By Genre">
+		</form>
+		{{{body}}}
+		<h1>Add a Band Recommendation</h1>
+		<form method="post" class="bandInput">
+			Band Name: <input type="text" name="name">
+			<br>
+			Location: <input type="text" name="location">
+			<br>
+			Description: <input type="text" name="description">
+			<br>
+			Rock <input type="radio" value="Rock" name="genre" >
+			Pop <input type="radio" value="Pop" name="genre" >
+			<br>
+			Hip-hop <input type="radio" value="Hip-hop" name="genre" >
+			Electronic <input type="radio" value="Electronic" name="genre" >
+			<br>
+			Metal <input type="radio" value="Metal" name="genre" >
+			Jazz <input type="radio" value="Jazz" name="genre">
+			<br>
+			<input type="submit" class="submitButton" value="Submit">
+		</form>
+	</body>
+</html>

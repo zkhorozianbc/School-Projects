@@ -1,0 +1,23 @@
+body {
+	text-align: center;
+}
+
+.filter {
+
+	border-style: solid;
+	border-left: none;
+	border-right: none;
+	border-width: thin;
+
+}
+.bandInput {
+	border-style: solid;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	border-width: thin;
+}
+
+input {
+	font-size: 16px;
+}
