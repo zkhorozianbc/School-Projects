@@ -13,20 +13,10 @@ app.use(express.static(publicPath));
 app.use(bodyParser.urlencoded({extended:false}));
 
 
-// TODO:
-// implement the function, parseCookies, in cookied.js
-// it should parse the incoming "Cookie" header
-// into a property called hwCookies on the req object
 app.use(cookied.parseCookies);
-
-// TODO:
-// implement the function, manageSession, in cookied.js
-// it should either fetch the data associated with an
-// incoming session id (based on parsed cookies from
-// above) or generate a new session id and use
-// Set-Cookie to create a cookie with that session id on
-// the client side
 app.use(cookied.manageSession);
+
+
 
 app.get('/', function(req, res) {
     const favColor = req.hwSession.favColor || '#fff';
