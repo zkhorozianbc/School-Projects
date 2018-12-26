@@ -1,0 +1,16 @@
+
+
+(S
+  (NP (Noun dogs))
+  (VP (Verb wag) (NP (NP (Noun tail)) (Conj and) (NP (Noun bark)))))
+(S
+  (NP (Noun dogs) (Noun wag))
+  (VP (VP (Verb tail)) (Conj and) (VP (Verb bark))))
+(S
+  (NP (Noun dogs))
+  (VP (VP (Verb wag) (NP (Noun tail))) (Conj and) (VP (Verb bark))))
+
+
+
+
+
