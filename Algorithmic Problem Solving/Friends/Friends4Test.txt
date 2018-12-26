@@ -1,0 +1,11 @@
+5
+anna 20
+bob 20
+claire 20
+david 20
+alice 20
+4
+anna claire
+bob david
+anna david
+alice david

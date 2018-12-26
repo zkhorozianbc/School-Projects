@@ -1,0 +1,3 @@
+forsmallyoucanenumeratehowtosplitsintoaandb
+mustusefaststringmatchingtocheckifaandbaresubstringsofxandy
+sampleinputscanbeveryhelpfullol

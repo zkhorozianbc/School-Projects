@@ -1,0 +1,12 @@
+7
+aa 1
+ab 2
+ac 3
+ad 1
+bat 10
+bay 11
+boy 11
+3
+a#
+b#
+bo#

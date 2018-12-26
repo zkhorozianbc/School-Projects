@@ -1,0 +1,13 @@
+5
+john mary henry lisa bob
+10
+s
+j tom
+j alice
+s
+l lisa
+s
+s
+l tom
+j helen
+s
