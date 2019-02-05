@@ -1,5 +1,5 @@
-//Knapsack problem solved using steepest ascent hill climbing with random restart
-//driver function is climb()
+//Knapsack problem solved using iterative deepening search
+//driver function is IDDFS()
 
 
 

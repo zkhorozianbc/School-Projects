@@ -1,3 +1,6 @@
+//Knapsack problem solved using steepest ascent hill climbing with random restart
+//driver function is climb()
+
 import java.io.*;
 import java.util.*;
 import java.lang.Math;
