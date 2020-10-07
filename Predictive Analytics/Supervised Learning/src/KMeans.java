@@ -6,7 +6,7 @@ public class KMeans {
 
     private final boolean DEBUG = true;
 
-    private double[][] M,centroids;
+    public double[][] M,centroids;
     public int K,xDim,yDim,numEpochs;
     public int[] clusterAssignments;
     private int[] prevAssignments;
