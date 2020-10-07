@@ -1,0 +1,15 @@
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+#Mac/OSX
+.DS_Store
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+#firefox driver
+geckodriver.log
