@@ -1,5 +1,5 @@
 ### Goal
-    Perform document clustering using KMeans
+    Perform document clustering using pretrained KMeans model of similar text data
 
 ### Instructions
     Run PreProcessor.java
