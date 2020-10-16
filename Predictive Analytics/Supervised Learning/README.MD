@@ -1,3 +1,6 @@
+### Goal
+Perform document clustering using KMeans
+
 ### Instructions
     Run PreProcessor.java
     Results are printed to stdout
